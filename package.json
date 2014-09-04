@@ -1,0 +1,27 @@
+{
+  "name": "bauer-cluster-queue",
+  "version": "1.0.0",
+  "description": "Plugin for bauer-cluster to add request queue feature.",
+  "keywords": ["multi-thread","multi-core","process","fork","multi-process","cluster","request","worker","queue"],
+  "license": "MIT",
+  "homepage": "https://github.com/yneves/node-bauer-cluster-queue",
+  "author": {
+    "name": "Yuri Neves Silveira",
+    "url": "http://yneves.com/",
+    "email": "npm@yneves.com"
+  },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/yneves/node-bauer-cluster-queue.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": ">=1.0.0"
+  },
+  "dependencies": {
+    "bauer-factory": ">=1.1.0"
+  },
+  "main": "cluster.js"
+}
