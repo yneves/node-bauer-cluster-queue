@@ -28,7 +28,7 @@ cluster.start();
 
 ### .config.slots
 
-This configuration defines how many concurrent requests the worker can handle. Above the specified number, requests are queued until slots become available. Defaults to `1`. This should be configured at the child process.
+Defines how many concurrent requests the worker can handle. Above the specified number, requests are queued until slots become available. Defaults to `1`. This should be configured at the child process.
 
 ```js
 worker.configure({
