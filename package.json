@@ -23,5 +23,8 @@
   "dependencies": {
     "bauer-factory": ">=1.1.0"
   },
-  "main": "cluster.js"
+  "devDependencies": {
+    "bauer-cluster": ">=1.0.0"
+  },
+  "main": "queue.js"
 }
