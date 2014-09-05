@@ -47,7 +47,7 @@ request.on("response",function(data) {});
 worker.request({ read: "path"},function(data) {});
 ```
 
-Also, its possible to create an empty requests and send it later. Just like this.
+Also, its possible to create an empty request and send it later. Just like this.
 
 ```js
 var request = worker.request();

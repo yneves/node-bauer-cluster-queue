@@ -1,3 +1,9 @@
+/*!
+**  bauer-cluster-queue -- Plugin for bauer-cluster to add request queue feature.
+**  Copyright (c) 2014 Yuri Neves Silveira <http://yneves.com>
+**  Licensed under The MIT License <http://opensource.org/licenses/MIT>
+**  Distributed on <http://github.com/yneves/node-bauer-cluster-queue>
+*/
 // - -------------------------------------------------------------------- - //
 
 var lib = {
@@ -10,7 +16,7 @@ var lib = {
 // @Response
 var Response = lib.factory.class({
 
-  inherits: "events.EventEmitter",
+  inherits: lib.events.EventEmitter,
 
   // new Response(worker,id)
   constructor: function(worker,id) {
@@ -44,7 +50,7 @@ var Response = lib.factory.class({
 // @Request
 var Request = lib.factory.class({
 
-  inherits: "events.EventEmitter",
+  inherits: lib.events.EventEmitter,
 
   // new Request(worker)
   constructor: function(worker) {
@@ -160,16 +166,16 @@ var Worker = {
       return request;
     },
 
-    // .request(params)
-    1: function(params) {
+    // .request(data)
+    1: function(data) {
       var request = this.request();
-      request.send(params);
+      request.send(data);
       return request;
     },
 
-    // .request(params,callback)
-    2: function(params,callback) {
-      var request = this.request(params);
+    // .request(data,callback)
+    2: function(data,callback) {
+      var request = this.request(data);
       request.once("response",callback);
       return request;
     },
