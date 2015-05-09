@@ -112,14 +112,14 @@ var Worker = {
 
     this.on("message",function(message) {
       if (lib.factory.isObject(message) && lib.factory.isString(message.id)) {
-        if (!lib.factory.isNull(message.response)) {
+        if (lib.factory.isDefined(message.response)) {
           var request = this._pending[message.id];
           if (request) {
             request.emit("response",message.response);
             delete this._pending[message.id];
             this.emit("response",request.data,message.response);
           }
-        } else if (!lib.factory.isNull(message.request)) {
+        } else if (lib.factory.isDefined(message.request)) {
           this.queue(message);
         }
       }
