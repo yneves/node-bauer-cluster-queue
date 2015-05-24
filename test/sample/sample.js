@@ -1,8 +1,12 @@
 // - -------------------------------------------------------------------- - //
 
-var cluster = require("bauer-cluster");
+"use strict";
 
-cluster.require("../../");
+var mod = require("bauer-cluster");
+
+var cluster = new mod.Cluster();
+
+cluster.require("../../../");
 
 cluster.master(function() {
 
@@ -14,7 +18,7 @@ cluster.master(function() {
 
   worker.on("response",function(req,res) {
     process.stdout.write("response." + res);
-    if (res == 20) {
+    if (res === 20) {
       worker.kill();
     } else {
       worker.request(res + 1);
@@ -28,7 +32,7 @@ cluster.master(function() {
 cluster.worker(function(worker) {
 
   worker.on("exit",function() {
-    process.stdout.write("worker.exit")
+    process.stdout.write("worker.exit");
     process.stdout.write(message);
   });
 
