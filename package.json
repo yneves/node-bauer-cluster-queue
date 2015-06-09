@@ -1,6 +1,6 @@
 {
   "name": "bauer-cluster-queue",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Plugin for bauer-cluster to add request queue feature.",
   "keywords": [
     "multi-thread",
@@ -28,8 +28,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "bauer-cluster": "^1.1.1",
-    "bauer-factory": "^1.2.8"
+    "bauer-cluster": "^1.2.2",
+    "bauer-factory": "^2.0.0"
   },
   "main": "lib/index.js"
 }
