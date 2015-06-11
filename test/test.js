@@ -4,7 +4,7 @@
 var cp = require("child_process");
 var assert = require("assert");
 var clusterModule = require("bauer-cluster");
-var clusterQueue = require("bauer-cluster-queue");
+var clusterQueue = require("../");
 
 // - -------------------------------------------------------------------- - //
 
