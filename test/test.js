@@ -12,8 +12,8 @@ describe("Queue",function() {
   
   it ("proto",function() {
     assert.strictEqual(typeof clusterModule.Worker.prototype.setupQueue,"function");
-		assert.strictEqual(typeof clusterModule.Worker.prototype.queue,"function");
-		assert.strictEqual(typeof clusterModule.Worker.prototype.request,"function");
+    assert.strictEqual(typeof clusterModule.Worker.prototype.queue,"function");
+    assert.strictEqual(typeof clusterModule.Worker.prototype.request,"function");
   });
 
   it("queue",function(done) {
