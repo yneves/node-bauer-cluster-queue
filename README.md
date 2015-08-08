@@ -42,6 +42,27 @@ myCluster.worker(function(worker) {
 myCluster.start();
 ```
 
+## API Summary
+
+  * `Worker`
+    * `.setupQueue() :void`
+    * `.flush() :void`
+    * `.queue(message) :Request`
+    * `.request() :Request`
+    * `.request(data Object) :Request`
+    * `.request(data Object, callback Function) :Request`
+  
+  * `Request`
+    * `new Request(worker Worker) :Request`
+    * `.send() :void`
+    * `.send(data) :void`
+
+  * `Response`
+    * `new Response(worker Worker) :Response`
+    * `.send() :void`
+    * `.send(data Object) :void`
+
+
 ## License
 
 [MIT](./LICENSE)
