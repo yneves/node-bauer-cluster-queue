@@ -47,7 +47,7 @@ myCluster.start();
   * `Worker`
     * `.setupQueue() :void`
     * `.flush() :void`
-    * `.queue(message) :Request`
+    * `.queue(message Object) :void`
     * `.request() :Request`
     * `.request(data Object) :Request`
     * `.request(data Object, callback Function) :Request`
