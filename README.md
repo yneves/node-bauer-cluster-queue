@@ -55,10 +55,10 @@ myCluster.start();
   * `Request`
     * `new Request(worker Worker) :Request`
     * `.send() :void`
-    * `.send(data) :void`
+    * `.send(data Object) :void`
 
   * `Response`
-    * `new Response(worker Worker) :Response`
+    * `new Response(worker Worker, id String) :Response`
     * `.send() :void`
     * `.send(data Object) :void`
 
