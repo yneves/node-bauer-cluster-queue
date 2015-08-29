@@ -17,15 +17,15 @@ cluster.master(function() {
   });
 
   worker.on("response",function(req,res) {
-    process.stdout.write("response." + res);
-    if (res === 20) {
+    process.stdout.write("response." + res.counter);
+    if (res.counter === 20) {
       worker.kill();
     } else {
-      worker.request(res + 1);
+      worker.request({ counter: res.counter + 1 });
     }
   });
 
-  worker.request(1);
+  worker.request({ counter: 1 });
 
 });
 
@@ -37,8 +37,8 @@ cluster.worker(function(worker) {
   });
 
   worker.on("request",function(req,res) {
-    process.stdout.write("request." + req);
-    res.send(req + 1);
+    process.stdout.write("request." + req.counter);
+    res.send({ counter: req.counter + 1 });
   });
 
 });
